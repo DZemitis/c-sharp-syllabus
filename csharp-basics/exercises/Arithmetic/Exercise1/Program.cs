@@ -6,8 +6,11 @@ namespace ConsoleApp8
     {
         static void Main(string[] args)
         {
-
-            Console.WriteLine(CheckIfTrue(5, 20));
+            Console.WriteLine("Enter first number");
+            int number1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter second number");
+            int number2 = int.Parse(Console.ReadLine());
+            Console.WriteLine(CheckIfTrue(number1, number2));
         }
 
         public static bool CheckIfTrue(int n1, int n2)
