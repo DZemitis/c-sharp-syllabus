@@ -13,10 +13,9 @@ namespace ConsoleApp8
             Console.WriteLine(CheckIfTrue(number1, number2));
         }
 
-        public static bool CheckIfTrue(int n1, int n2)
+        public static bool CheckIfTrue(int number1, int number2)
         {
-
-            if (n1 + n2 == 15 || n2 - n1 == 15 || n1 == 15 || n2 == 15 || n1 - n2 == 15)
+            if (number1 + number2 == 15 || number2 - number1 == 15 || number1 == 15 || number2 == 15 || number1 - number2 == 15)
             {
                 return true;
             }
