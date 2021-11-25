@@ -6,7 +6,10 @@ namespace Exercise_4
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            string name = "Juan Valdez";
+            int yearOfBirth = 1995;
+
+            Console.WriteLine("My name is {0} and I was born in {1}.", name, yearOfBirth);
         }
     }
 }
