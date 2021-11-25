@@ -10,14 +10,14 @@ namespace CalculateArea
     {
         public static double AreaOfCircle(decimal radius)
         {
-            decimal areOf =   (decimal)Math.PI * radius * radius;
+            decimal areOf = (decimal)Math.PI * radius * radius;
             return (double)areOf;
         }
 
         public static double AreaOfRectangle(decimal length, decimal width)
         {
-                decimal areOfRectangle = length * width;
-                return (double)areOfRectangle;
+            decimal areOfRectangle = length * width;
+            return (double)areOfRectangle;
         }
 
         public static double AreaOfTriangle(decimal ground, decimal h)

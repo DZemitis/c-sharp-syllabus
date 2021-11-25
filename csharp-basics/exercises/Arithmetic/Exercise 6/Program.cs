@@ -34,6 +34,7 @@ namespace Exercise_6
                 {
                     Console.Write(i +" ");
                 }
+
                 if (i % 11 == 0)
                 {
                     Console.WriteLine();
