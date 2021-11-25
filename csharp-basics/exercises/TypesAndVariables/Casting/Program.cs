@@ -17,28 +17,24 @@ namespace Casting
 
         static void First()
         {
-            string a = "1";
-            int b = 2;
-            int c = 3;
-            double d = 4;
-            float e = 5;
-
-            //fixme - should be 15 :|
-            //int sum = a + b + c + d + e;
-            //Console.WriteLine(sum);
+            byte a = 1;
+            byte b = 2;
+            byte c = 3;
+            byte d = 4;
+            byte e = 5;
+            byte sum = (byte)(a + b + c + d + e);
+            Console.WriteLine(sum);
         }
 
         static void Second()
         {
-            string a = "1";
-            int b = 2;
-            int c = 3;
+            double a = 1;
+            double b = 2;
+            double c = 3;
             double d = 4.2;
-            float e = 5.3f;
-
-            //fixme - should be 15.5 :| 
-            //float sum = a + b + c + d + e;
-            //Console.WriteLine(sum);
+            double e = 5.3d;
+            double sum = a + b + c + d + e;
+            Console.WriteLine(sum);
         }
     }
 }
