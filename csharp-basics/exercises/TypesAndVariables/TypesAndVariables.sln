@@ -11,9 +11,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SadFor", "SadFor\SadFor.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VariablesAndNames", "VariablesAndNames\VariablesAndNames.csproj", "{38CD71E6-6995-4D0D-A781-B4202B40BFB1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise 4", "Exercise 4\Exercise 4.csproj", "{089151DF-FDBE-498A-A10D-07902E9DA27E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercise 4", "Exercise 4\Exercise 4.csproj", "{089151DF-FDBE-498A-A10D-07902E9DA27E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise 5", "Exercise 5\Exercise 5.csproj", "{AF4210AE-72D7-4DDC-9AE2-B2E1EE05D4EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercise 5", "Exercise 5\Exercise 5.csproj", "{AF4210AE-72D7-4DDC-9AE2-B2E1EE05D4EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise 6", "Exercise 6\Exercise 6.csproj", "{F12CCD7A-8F40-451A-8233-653DF9C32C0D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{AF4210AE-72D7-4DDC-9AE2-B2E1EE05D4EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AF4210AE-72D7-4DDC-9AE2-B2E1EE05D4EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AF4210AE-72D7-4DDC-9AE2-B2E1EE05D4EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F12CCD7A-8F40-451A-8233-653DF9C32C0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F12CCD7A-8F40-451A-8233-653DF9C32C0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F12CCD7A-8F40-451A-8233-653DF9C32C0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F12CCD7A-8F40-451A-8233-653DF9C32C0D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
