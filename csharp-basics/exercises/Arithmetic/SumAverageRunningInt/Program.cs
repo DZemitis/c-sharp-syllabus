@@ -7,7 +7,6 @@ namespace SumAverageRunningInt
         static void Main(string[] args)
         {
             var sum = 0;
-            int average;
             const int lowerBound = 1;
             const int upperBound = 100;
 
@@ -15,6 +14,11 @@ namespace SumAverageRunningInt
             {
                 sum += number;
             }
+            
+            double average = (double)(lowerBound + upperBound) / 2;
+
+            Console.WriteLine("The sum of 1 to 100 is {0}", sum);
+            Console.WriteLine("The average is {0}", average);
         }
     }
 }

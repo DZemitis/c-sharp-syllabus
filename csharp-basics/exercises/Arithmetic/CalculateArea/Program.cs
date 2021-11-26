@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Diagnostics.Eventing.Reader;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,38 +13,47 @@ namespace CalculateArea
     {
         static void Main(string[] args)
         {
-           // Get the user's menu choice.
+            GetMenu();
         }
 
         public static int GetMenu()
         {
-
-            int userChoice;
-            
-
-            // Display the menu.
             Console.WriteLine("Geometry Calculator\n");
             Console.WriteLine("1. Calculate the Area of a Circle");
             Console.WriteLine("2. Calculate the Area of a Rectangle");
             Console.WriteLine("3. Calculate the Area of a Triangle");
             Console.WriteLine("4. Quit\n");
             Console.WriteLine("Enter your choice (1-4) : ");
-            var keyboard = Console.ReadKey();
-            // get input from user
+            var keyboard = Console.ReadKey().KeyChar.ToString();
+            int userChoice = int.Parse(keyboard);
 
-            // validate input
-
+            if (userChoice == 1)
+            {
+                CalculateCircleArea();
+            }
+            else if (userChoice == 2)
+            {
+                CalculateRectangleArea();
+            }
+            else if (userChoice == 3)
+            {
+                CalculateTriangleArea();
+            }
+            else if (userChoice == 4)
+            {
+                Console.WriteLine("Quit");
+            }
+            
             return userChoice;
         }
 
         public static void CalculateCircleArea()
         {
-            // Get input from user
-            Console.WriteLine("What is the circle's radius? ");
-            //todo
+            Console.WriteLine("\nWhat is the circle's radius? ");
+            decimal radius = decimal.Parse(Console.ReadLine());
 
-
-            // Display output
+            decimal circleArea = (decimal)Math.PI * radius * 2;
+            
             Console.WriteLine("The circle's area is "
                     + Geometry.AreaOfCircle(radius));
         }
@@ -51,19 +63,14 @@ namespace CalculateArea
             decimal length = 0;
             decimal width = 0;
 
-            // Get input from user
-
-            // Get length
-            Console.WriteLine("Enter length? ");
-            //todo
-
-            // Get width
+            Console.WriteLine("\nEnter length? ");
+            length = decimal.Parse(Console.ReadLine());
+            
             Console.WriteLine("Enter width? ");
-            //todo
+            width = decimal.Parse(Console.ReadLine());
 
-            // Display output
             Console.WriteLine("The rectangle's area is "
-                    + Geometry.AreaOfTriangle(length, width));
+                    + Geometry.AreaOfRectangle(length, width));
         }
 
         public static void CalculateTriangleArea()
@@ -71,21 +78,14 @@ namespace CalculateArea
             decimal ground = 0;
             decimal height = 0;
 
-            // Get input from user
+            Console.WriteLine("\nEnter length of the triangle's base? ");
+            ground = decimal.Parse(Console.ReadLine());
 
-            // Get the base
-            Console.WriteLine("Enter length of the triangle's base? ");
-            //todo
-            //read key value
-
-            // Get the height
             Console.WriteLine("Enter triangle's height? ");
-            //todo
-            //read key value
+            height = decimal.Parse(Console.ReadLine());
 
-            // Display the triangle's area.
             Console.WriteLine("The triangle's area is "
-                    + Geometry.AreaOfRectangle(ground, height));
+                    + Geometry.AreaOfTriangle(ground, height));
         }
     }
 }
