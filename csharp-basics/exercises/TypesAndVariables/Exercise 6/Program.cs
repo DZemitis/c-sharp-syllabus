@@ -9,28 +9,23 @@ namespace Exercise_6
     {
         static void Main(string[] args)
         {
-            // Write a program that asks the user to enter a series of single digit numbers and calculate the sum of all the numbers.
-            //int[] userInputNumbers = new int[] {int.Parse(Console.ReadLine())};
-            // List<int> list1 = new List<int>() { int.Parse(Console.ReadLine()) };
-            // int sum2 = list1.Sum();
-            // int sumOfInput = userInputNumbers.Sum();
-            //Console.WriteLine("Sum is {0}", userInputNumbers);
-            // Console.WriteLine("Sum is {0}", sum2);
-            double[] array = new double[6];
-            Console.WriteLine("Please enter your numbers");
-            for (int i = 0; i < 6; i++)
+            int[] array = new int[5];
+            Console.WriteLine("Please enter five numbers to get sum of them");
+             
+            for (int i = 0; i < 5; i++)
             {
-                array[i] = Convert.ToDouble(Console.ReadLine());
+                var input = Console.ReadKey().KeyChar.ToString();
+                array[i] = int.Parse(input);
             }
 
             double sum = 0;
 
-            foreach (double j in array)
+            foreach (int j in array)
             {
                 sum += j;
             }
 
-            Console.WriteLine("sum of numbers are {0}", array.Sum());
-        }
+            Console.WriteLine("\nSum of your numbers are {0}", array.Sum());
         }
     }
+}
