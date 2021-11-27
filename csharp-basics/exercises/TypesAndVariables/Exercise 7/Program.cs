@@ -9,6 +9,7 @@ namespace Exercise_7
             Console.WriteLine("Enter string!");
             string userInput = Console.ReadLine();
             int countUpper = 0;
+
             for (int i = 0; i < userInput.Length; i++)
             {
                 if (char.IsUpper(userInput[i]))
