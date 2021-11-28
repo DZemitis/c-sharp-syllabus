@@ -16,7 +16,6 @@ namespace Exercise2
             for (int i = minNumber; i <= maxNumber; i++)
             {
                 sum += i;
-                Console.WriteLine(i);
             }
 
             Console.WriteLine("The sum is " + sum);

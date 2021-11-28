@@ -8,22 +8,25 @@ namespace TicTacToe
     {
         private static char[,] board = new char[3, 3];
 
-        private static void Main(string[] args)
+        private static void Main()
         {
             char player = 'X';
             int movesPlayed = 0;
             InitBoard();
-            while (true)
+            bool playAgain = true;
+
+            while (playAgain == true)
             {
                 DisplayBoard();
                 Console.WriteLine($"Player {player} make a move!");
                 Console.Write("Please enter row: ");
-                int row = int.Parse(Console.ReadLine());
-                Console.Write("Please enter col: ");
-                int col = int.Parse(Console.ReadLine());
+                int row = int.Parse(Console.ReadKey().KeyChar.ToString());
+                Console.Write("\nPlease enter col: ");
+                int col = int.Parse(Console.ReadKey().KeyChar.ToString());
                 board[row, col] = player;
                 Console.Clear();
 
+                //win conditions
                 if (player == board[0, 0] && player == board[0, 1] && player == board[0, 2])
                 {
                     Console.WriteLine($"{player} has won the game");
@@ -65,39 +68,60 @@ namespace TicTacToe
                     break;
                 }
 
-                movesPlayed = movesPlayed + 1;
+                for (int i = 0; i < board.Length; i++)
+                {
+                    if (board[col,row] == 'X')
+                    {
+                        Console.WriteLine("Already exist!");
+                    }
+                    else
+                    {
+                        board[row, col] = player;
+                        movesPlayed++;
+                    }
+                }
+               
+                /*if (board[col, row] == player)
+                {
+                    Console.WriteLine("Already exists!");
+                }
+                else
+                {
+                    board[row, col] = player;
+                    movesPlayed++;
+                }*/
 
+                //player turns
+                movesPlayed = movesPlayed + 1;
                 if (movesPlayed == 9)
                 {
                     Console.WriteLine("DRAW!!!");
                     break;
                 }
-
-                if (player == 'X')
-                {
-                    player = 'O';
-                }
-                else
-                {
-                    player = 'X';
-                }
-
+                
+                player = PlayerTurn(player);
             }
 
             Console.WriteLine("Game ended!");
-            Console.WriteLine("Would You like to Restart the game?");
-            Console.WriteLine("Type yes or no");
-            string restartGame = Console.ReadLine();
-            if (restartGame == "yes")
+            Console.WriteLine("Would You like to Restart the game? Y/N");
+            char restartGame = Console.ReadKey().KeyChar;
+            //restart game
+            if (restartGame == 'y')
             {
                 Console.Clear();
-                Console.WriteLine("Im working on it!");
+                playAgain = true;
+                Main();
             }
             else
             {
                 Console.Clear();
                 Console.WriteLine("Thank You for the game!");
             }
+        }
+
+        private static void addData(out int row, out int col)
+        {
+            throw new NotImplementedException();
         }
 
         private static void Draw(int playerMoves)
