@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http.Headers;
+using System.Xml.Schema;
 
 namespace Exercise_6
 {
@@ -9,23 +10,16 @@ namespace Exercise_6
     {
         static void Main(string[] args)
         {
-            int[] array = new int[5];
-            Console.WriteLine("Please enter five numbers to get sum of them");
-             
-            for (int i = 0; i < 5; i++)
+            Console.WriteLine("Enter numbers to sum!");
+            var userInput = int.Parse(Console.ReadLine());
+            int sum = 0;
+
+            for (int i = 0; i <= userInput.ToString().Length; i++)
             {
-                var input = Console.ReadKey().KeyChar.ToString();
-                array[i] = int.Parse(input);
+                sum += i;
             }
 
-            double sum = 0;
-
-            foreach (int j in array)
-            {
-                sum += j;
-            }
-
-            Console.WriteLine("\nSum of your numbers are {0}", array.Sum());
+            Console.WriteLine($"Total sum is {sum}");
         }
     }
 }
