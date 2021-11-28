@@ -60,7 +60,7 @@ namespace Exercise_5
                         break;
                 }
 
-                Console.Write(digit);
+                Console.Write(digit + " ");
             }
 
             Console.WriteLine($" has been pressed to get {userInput}");
