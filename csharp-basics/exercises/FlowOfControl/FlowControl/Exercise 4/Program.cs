@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.Design;
 using System.Runtime.InteropServices;
 
 namespace Exercise_4
@@ -11,33 +12,38 @@ namespace Exercise_4
             Console.WriteLine("Enter 0-6 to get the day of the weak!");
             var userInput = int.Parse(Console.ReadLine());
 
-                switch (userInput)
-                {
-                    case 0:
-                        Console.WriteLine(dayInWord[0]);
-                        break;
-                    case 1:
-                        Console.WriteLine(dayInWord[1]);
-                        break;
-                    case 2:
-                        Console.WriteLine(dayInWord[2]);
-                        break;
-                    case 3:
-                        Console.WriteLine(dayInWord[3]);
-                        break;
-                    case 4:
-                        Console.WriteLine(dayInWord[4]);
-                        break;
-                    case 5:
-                        Console.WriteLine(dayInWord[5]);
-                        break;
-                    case 6:
-                        Console.WriteLine(dayInWord[6]);
-                        break;
-                    default:
-                        Console.WriteLine("Day is not valid");
-                        break;
-                }
+            if (userInput == 0)
+            {
+                Console.WriteLine(dayInWord[0]);
+            }
+            else if (userInput == 1)
+            {
+                Console.WriteLine(dayInWord[1]);
+            }
+            else if (userInput == 2)
+            {
+                Console.WriteLine(dayInWord[2]);
+            }
+            else if (userInput == 3)
+            {
+                Console.WriteLine(dayInWord[3]);
+            }
+            else if (userInput == 4)
+            {
+                Console.WriteLine(dayInWord[4]);
+            }
+            else if (userInput == 5)
+            {
+                Console.WriteLine(dayInWord[5]);
+            }
+            else if (userInput == 6)
+            {
+                Console.WriteLine(dayInWord[6]);
+            }
+            else 
+            {
+                Console.WriteLine("Day is not valid!");
+            }
         }
     }
 }
