@@ -17,95 +17,96 @@ namespace TicTacToe
 
             while (playAgain == true)
             {
-                DisplayBoard();
-                Console.WriteLine($"Player {player} make a move!");
-                Console.Write("Please enter row: ");
-                int row = int.Parse(Console.ReadKey().KeyChar.ToString());
-                Console.Write("\nPlease enter col: ");
-                int col = int.Parse(Console.ReadKey().KeyChar.ToString());
-                board[row, col] = player;
+               
                 Console.Clear();
+                DisplayBoard();
+                Console.WriteLine("\n");
+                addData(out int row, out int col);
 
+                if (board[row, col] == 'X' || board[row, col] == 'X')
+                {
+                    Console.WriteLine(" Already exist");
+                    Console.ReadKey();
+                }
+                else
+                {
+                    board[row, col] = player;
+                }
+
+                
                 //win conditions
                 if (player == board[0, 0] && player == board[0, 1] && player == board[0, 2])
                 {
+                    Console.Clear();
                     Console.WriteLine($"{player} has won the game");
                     break;
                 }
                 else if (player == board[1, 0] && player == board[1, 1] && player == board[1, 2])
                 {
+                    Console.Clear();
                     Console.WriteLine($"{player} has won the game");
                     break;
                 }
                 else if (player == board[2, 0] && player == board[2, 1] && player == board[2, 2])
                 {
+                    Console.Clear();
                     Console.WriteLine($"{player} has won the game");
                     break;
                 }
                 else if (player == board[0, 0] && player == board[1, 1] && player == board[2, 2])
                 {
+                    Console.Clear();
                     Console.WriteLine($"{player} has won the game");
                     break;
                 }
                 else if (player == board[2, 0] && player == board[1, 1] && player == board[0, 2])
                 {
+                    Console.Clear();
                     Console.WriteLine($"{player} has won the game");
                     break;
                 }
                 else if (player == board[0, 0] && player == board[1, 0] && player == board[2, 0])
                 {
+                    Console.Clear();
                     Console.WriteLine($"{player} has won the game");
                     break;
                 }
                 else if (player == board[0, 1] && player == board[1, 1] && player == board[2, 1])
                 {
+                    Console.Clear();
                     Console.WriteLine($"{player} has won the game");
                     break;
                 }
                 else if (player == board[0, 2] && player == board[1, 2] && player == board[2, 2])
                 {
+                    Console.Clear();
                     Console.WriteLine($"{player} has won the game");
                     break;
                 }
+                
+                
+                
 
-                for (int i = 0; i < board.Length; i++)
-                {
-                    if (board[col,row] == 'X')
-                    {
-                        Console.WriteLine("Already exist!");
-                    }
-                    else
-                    {
-                        board[row, col] = player;
-                        movesPlayed++;
-                    }
-                }
-               
-                /*if (board[col, row] == player)
-                {
-                    Console.WriteLine("Already exists!");
-                }
-                else
-                {
-                    board[row, col] = player;
-                    movesPlayed++;
-                }*/
-
-                //player turns
-                movesPlayed = movesPlayed + 1;
+                /*movesPlayed = movesPlayed + 1;
                 if (movesPlayed == 9)
                 {
                     Console.WriteLine("DRAW!!!");
                     break;
-                }
+                }*/
                 
                 player = PlayerTurn(player);
             }
 
+            
             Console.WriteLine("Game ended!");
             Console.WriteLine("Would You like to Restart the game? Y/N");
             char restartGame = Console.ReadKey().KeyChar;
-            //restart game
+            
+            RestartGame(restartGame, playAgain);
+        }
+
+        private static void RestartGame(char restartGame, bool playAgain)
+        {
             if (restartGame == 'y')
             {
                 Console.Clear();
@@ -121,7 +122,23 @@ namespace TicTacToe
 
         private static void addData(out int row, out int col)
         {
-            throw new NotImplementedException();
+            Console.Write("Please enter row: ");
+            string inputRow = Console.ReadKey().KeyChar.ToString();
+
+            while (!int.TryParse(inputRow, out row))
+            {
+                Console.Write("Please enter row: ");
+                inputRow = Console.ReadKey().KeyChar.ToString();
+            }
+
+            Console.Write("\nPlease enter col: ");
+            string inputColumn = Console.ReadKey().KeyChar.ToString();
+
+            while (!int.TryParse(inputColumn, out col))
+            {
+                Console.Write("\nPlease enter col: ");
+                inputColumn = Console.ReadKey().KeyChar.ToString();
+            }
         }
 
         private static void Draw(int playerMoves)
