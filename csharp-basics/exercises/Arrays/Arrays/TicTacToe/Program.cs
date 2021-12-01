@@ -1,6 +1,4 @@
 ﻿using System;
-using System.ComponentModel;
-using System.Media;
 
 namespace TicTacToe
 {
@@ -11,92 +9,85 @@ namespace TicTacToe
         private static void Main()
         {
             char player = 'X';
-            int movesPlayed = 0;
+            int turns = 1;
             InitBoard();
             bool playAgain = true;
 
             while (playAgain == true)
             {
-               
                 Console.Clear();
                 DisplayBoard();
-                Console.WriteLine("\n");
+                Console.WriteLine($"\nPlayer {player} make a move!");
                 addData(out int row, out int col);
-
-                if (board[row, col] == 'X' || board[row, col] == 'X')
+                
+                if ((board[row, col] == 'X' || board[row, col] == 'X') || (board[row, col] == 'O' || board[row, col] == 'O'))
                 {
-                    Console.WriteLine(" Already exist");
+                    Console.WriteLine("\nAlready exist");
                     Console.ReadKey();
+                    turns--;
                 }
                 else
                 {
                     board[row, col] = player;
                 }
+                turns++;
 
-                
-                //win conditions
+                player = turns % 2 == 0 ? 'O' : 'X';
+
                 if (player == board[0, 0] && player == board[0, 1] && player == board[0, 2])
                 {
                     Console.Clear();
-                    Console.WriteLine($"{player} has won the game");
+                    Console.WriteLine($"Congratulations, {player} has won the game!");
                     break;
                 }
                 else if (player == board[1, 0] && player == board[1, 1] && player == board[1, 2])
                 {
                     Console.Clear();
-                    Console.WriteLine($"{player} has won the game");
+                    Console.WriteLine($"Congratulations, {player} has won the game!");
                     break;
                 }
                 else if (player == board[2, 0] && player == board[2, 1] && player == board[2, 2])
                 {
                     Console.Clear();
-                    Console.WriteLine($"{player} has won the game");
+                    Console.WriteLine($"Congratulations, {player} has won the game!");
                     break;
                 }
                 else if (player == board[0, 0] && player == board[1, 1] && player == board[2, 2])
                 {
                     Console.Clear();
-                    Console.WriteLine($"{player} has won the game");
+                    Console.WriteLine($"Congratulations, {player} has won the game!");
                     break;
                 }
                 else if (player == board[2, 0] && player == board[1, 1] && player == board[0, 2])
                 {
                     Console.Clear();
-                    Console.WriteLine($"{player} has won the game");
+                    Console.WriteLine($"Congratulations, {player} has won the game!");
                     break;
                 }
                 else if (player == board[0, 0] && player == board[1, 0] && player == board[2, 0])
                 {
                     Console.Clear();
-                    Console.WriteLine($"{player} has won the game");
+                    Console.WriteLine($"Congratulations, {player} has won the game!");
                     break;
                 }
                 else if (player == board[0, 1] && player == board[1, 1] && player == board[2, 1])
                 {
                     Console.Clear();
-                    Console.WriteLine($"{player} has won the game");
+                    Console.WriteLine($"Congratulations, {player} has won the game!");
                     break;
                 }
                 else if (player == board[0, 2] && player == board[1, 2] && player == board[2, 2])
                 {
                     Console.Clear();
-                    Console.WriteLine($"{player} has won the game");
+                    Console.WriteLine($"Congratulations, {player} has won the game!");
                     break;
                 }
-                
-                
-                
 
-                /*movesPlayed = movesPlayed + 1;
-                if (movesPlayed == 9)
-                {
-                    Console.WriteLine("DRAW!!!");
-                    break;
-                }*/
-                
-                player = PlayerTurn(player);
+                if (turns != 10) continue;
+                Console.Clear();
+                Console.WriteLine("Its a tie!");
+                break;
             }
-
             
             Console.WriteLine("Game ended!");
             Console.WriteLine("Would You like to Restart the game? Y/N");
@@ -141,30 +132,6 @@ namespace TicTacToe
             }
         }
 
-        private static void Draw(int playerMoves)
-        {
-            playerMoves = playerMoves + 1;
-
-            if (playerMoves == 9)
-            {
-                Console.Clear();
-                Console.WriteLine("Its a tie!");
-            }
-        }
-
-        private static char PlayerTurn(char currentPlayer)
-        {
-            if (currentPlayer == 'X')
-            {
-                return 'O';
-            }
-            else
-            {
-                return 'X';
-            }
-        }
-        
-       
         private static void InitBoard()
         {
             for (var r = 0; r < 3; r++)
