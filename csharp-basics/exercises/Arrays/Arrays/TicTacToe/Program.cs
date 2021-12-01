@@ -20,7 +20,7 @@ namespace TicTacToe
                 Console.WriteLine($"\nPlayer {player} make a move!");
                 addData(out int row, out int col);
                 
-                if ((board[row, col] == 'X' || board[row, col] == 'X') || (board[row, col] == 'O' || board[row, col] == 'O'))
+                if (board[row, col] == 'X' || board[row, col] == 'O')
                 {
                     Console.WriteLine("\nAlready exist");
                     Console.ReadKey();
