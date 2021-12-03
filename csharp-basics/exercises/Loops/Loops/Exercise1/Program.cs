@@ -8,7 +8,7 @@ namespace Exercise1
         {
             Console.WriteLine("First 10 natural numbers are");
 
-            for (int i = 0; i < 10; i++)
+            for (int i = 1; i <= 10; i++)
             {
                 Console.Write(i + " ");
             }
