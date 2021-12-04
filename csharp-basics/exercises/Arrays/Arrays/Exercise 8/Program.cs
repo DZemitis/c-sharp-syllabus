@@ -53,14 +53,12 @@ namespace Exercise_8
                     Console.WriteLine($"Congratulations you have guessed the word: {guessable}!");
                     break;
                 }
-                else
+
+                if (missesCounter == 0)
                 {
-                    if (missesCounter == 0)
-                    {
-                        Console.Clear();
-                        Console.WriteLine("You lost!");
-                        break;
-                    }
+                    Console.Clear();
+                    Console.WriteLine("You lost!");
+                    break;
                 }
             }
 
