@@ -1,12 +1,14 @@
 ﻿using System;
 
-namespace Exercise_7
+namespace ConsoleApp1
 {
-    public class Piglet
+    class Piglet
     {
         public static int[] Dice = new int[6];
+        private static int _count = 0;
+        private static bool _gameOn = true;
 
-        public static void RollDice(int[] Dice)
+        public static void RandomDice(int[] Dice)
         {
             Random rnd = new Random();
 
@@ -15,32 +17,55 @@ namespace Exercise_7
                 Dice[i] = rnd.Next(1, 6);
             }
         }
-    }
 
-    class Program
-    {
-        static void Main(string[] args)
+        public static void PigGame()
         {
-            Console.WriteLine("Enter a number from 0 - 19 to get  random number!");
-            int input = int.Parse(Console.ReadLine());
+            while (_gameOn)
+            {
+                foreach (var t in Dice)
+                {
+                    if (t == 1)
+                    {
+                        _count = 0;
+                        Console.WriteLine("You rolled 1. Game Over!");
+                        _gameOn = false;
+                        break;
+                    }
+                    else
+                    {
+                        _count += t;
+                        Console.WriteLine($"You rolled: {t}");
+                        Console.WriteLine($"Your score is {_count}");
+                        Console.WriteLine("Roll again? y/n");
+                        var rollAgain = Console.ReadKey().KeyChar;
+                        if (rollAgain == 'y')
+                        {
+                            continue;
+                        }
+                        else
+                        {
+                            Console.WriteLine($"\nThanks for game! Your total is {_count}");
+                            Console.ReadKey();
+                            _gameOn = false;
 
-            var result = Dice[input];
-            Console.WriteLine($"Result is {result}");
-
-            //Write a console program in a class named Piglet that implements a simple 1-player dice game called "Piglet"
-            //(based on the game "Pig"). The player's goal is to accumulate as many points as possible without rolling a 1.
-            //Each turn, the player rolls the die; if they roll a 1,
-            //the game ends and they get a score of 0. Otherwise, they add this number to their running total score.
-            //The player then chooses whether to roll again, or end the game with their current point total.
-            //Here is an example dialogue where the user plays until rolling a 1, which ends the game with 0 points:
-
-            //Welcome to Piglet!
-            //You rolled a 5!
-            //Roll again? yes
-            //You rolled a 4!
-            //Roll again? yes
-            //You rolled a 1!
-            //You got 0 points.
+                        }
+                    }
+                }
+            }
+        }
+    }
+    internal class Program
+    {
+        public static void Main(string[] args)
+        {
+            Console.WriteLine("Welcome to game of Piglet!\n" +
+                              "It's a single player game, where You can roll dice!\n" +
+                              "Its simple! You keep on rolling or stop, just be careful.\n" +
+                              "If you roll 1, the game ends, and You get 0 points...\n" +
+                              "Press any key if You want to roll Your first dice!");
+            Console.ReadKey();
+            Piglet.RandomDice(Piglet.Dice);
+            Piglet.PigGame();
         }
     }
 }
