@@ -22,6 +22,18 @@ namespace Exercise_1
             product4.PrintProduct();
             product4.ChangeAmount(5);
             product4.PrintProduct();
+            Console.WriteLine();
+            var products = new Product[]
+            {
+                new Product("Banana", 1.1, 13),
+                new Product("Logitech mouse", 70.00, 14),
+                new Product("iPhone 5s", 999.99, 3),
+                new Product("Epson EB-U05", 440.46, 1)
+            };
+            foreach (var prod in products)
+            {
+                prod.PrintProduct();
+            }
         }
     }
 }
