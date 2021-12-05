@@ -10,13 +10,13 @@ namespace FuelConsumptionCalculator
     {
         private static void Main(string[] args)
         {
-            int startKilometers;
-            int liters;
+            int startKilometers = 0;
+            int liters = 0;
             
             Console.WriteLine();
 
-            Car car = new Car(0);
-            Car car1 = new Car(0);
+            Car car = new Car(0, startKilometers, liters);
+            Car car1 = new Car(0, startKilometers, liters);
             for (int i = 0; i < 3; i++)
             {
                 Console.Write("Enter first reading: ");
