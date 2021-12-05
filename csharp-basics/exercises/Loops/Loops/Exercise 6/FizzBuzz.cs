@@ -2,67 +2,26 @@
 
 namespace Exercise_6
 {
-    class FizzBuzz
-    { 
+    internal class FizzBuzz
+    {
         public static void FizzBuzzGame()
         {
             Console.WriteLine("Please enter a number!");
-            int input = int.Parse(Console.ReadLine());
+            var input = int.Parse(Console.ReadLine());
 
-            if (input > 100)
+            Console.WriteLine("Max Value? {0}", input);
+            for (var i = 1; i <= input; i++)
             {
-                Console.WriteLine("Max Value? 100");
-                for (int i = 1; i <= 100; i++)
-                {
-                    if (i % 5 == 0 && i % 3 == 0)
-                    {
-                        Console.Write("FizzBuzz ");
-                    }
-                    else if (i % 5 == 0)
-                    {
-                        Console.Write("Buzz ");
-                    }
-                    else if (i % 3 == 0)
-                    {
-                        Console.Write("Fizz ");
-                    }
-                    else
-                    {
-                        Console.Write(i + " ");
-                    }
+                if (i % 5 == 0 && i % 3 == 0)
+                    Console.Write("FizzBuzz ");
+                else if (i % 5 == 0)
+                    Console.Write("Buzz ");
+                else if (i % 3 == 0)
+                    Console.Write("Fizz ");
+                else
+                    Console.Write(i + " ");
 
-                    if (i % 20 == 0)
-                    {
-                        Console.WriteLine();
-                    }
-                }
-            }
-            else
-            {
-                for (int i = 1; i <= input; i++)
-                {
-                    if (i % 5 == 0 && i % 3 == 0)
-                    {
-                        Console.Write("FizzBuzz ");
-                    }
-                    else if (i % 5 == 0)
-                    {
-                        Console.Write("Buzz ");
-                    }
-                    else if (i % 3 == 0)
-                    {
-                        Console.Write("Fizz ");
-                    }
-                    else
-                    {
-                        Console.Write(i + " ");
-                    }
-
-                    if (i % 20 == 0)
-                    {
-                        Console.WriteLine();
-                    }
-                }
+                if (i % 20 == 0) Console.WriteLine();
             }
         }
     }

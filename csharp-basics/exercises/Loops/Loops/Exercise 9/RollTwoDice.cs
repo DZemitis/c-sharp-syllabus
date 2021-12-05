@@ -19,7 +19,6 @@ namespace Exercise_9
 
         public static void Game()
         {
-            
             CreateDice(_diceGenerator);
             int dice1 = _diceGenerator[0];
             int dice2 = _diceGenerator[5];
