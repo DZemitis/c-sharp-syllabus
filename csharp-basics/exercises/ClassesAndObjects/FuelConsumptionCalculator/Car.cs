@@ -1,14 +1,11 @@
-﻿using System;
-using System.Runtime.InteropServices.WindowsRuntime;
-
-namespace FuelConsumptionCalculator
+﻿namespace FuelConsumptionCalculator
 {
     public class Car
     {
-        private static double _startKilometers;
-        private static double _endKilometers;
-        private static double _liters;
-        
+        private double _startKilometers;
+        private double _endKilometers;
+        private double _liters;
+
 
         public Car(double startOdo, double endingOdo, double liters)
         {
