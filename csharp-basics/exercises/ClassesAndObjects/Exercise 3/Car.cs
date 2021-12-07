@@ -4,8 +4,8 @@ namespace Exercise_3
 {
     class Car
     {
-        private static string _name;
-        public static bool CarIsMoving = true;
+        private string _name;
+        public bool CarIsMoving = true;
 
         public Car(string name, int mileage, int liters)
         {
@@ -14,14 +14,14 @@ namespace Exercise_3
             FuelGauge.Currentliters = liters;
         }
 
-        public static void CarMoves()
+        public void CarMoves()
         {
             Odometer.Mileage();
             FuelGauge.CarRuns();
             Odometer.FuelLoss();
         }
 
-        public static void CarFills()
+        public void CarFills()
         {
             FuelGauge.FillUp();
         }

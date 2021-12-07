@@ -15,19 +15,19 @@ namespace Exercise_3
             
             while (FuelGauge.Currentliters < desiredLiters)
             {
-                Car.CarFills();
+                car1.CarFills();
                 Console.WriteLine(FuelGauge.Currentliters);
                 Console.WriteLine(Odometer.CurrentMileage);
             }
 
             while (Odometer.CurrentMileage < Odometer.CurrentMileage + desiredDistance)
-            { 
-                Car.CarMoves();
+            {
+                car1.CarMoves();
                 Console.WriteLine(FuelGauge.Currentliters);
                 Console.WriteLine(Odometer.CurrentMileage);
                 if (Odometer.CurrentMileage == Odometer.CurrentMileage + desiredDistance)
                 {
-                    Car.CarIsMoving = false;
+                    car1.CarIsMoving = false;
                     break;
                 }
             }
