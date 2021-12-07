@@ -13,8 +13,6 @@
         public double PriceAtStart { get; set; }
         public int AmountAtStart { get; set; }
 
-
-
         public string PrintProduct()
         {
             return $"{_name} price {PriceAtStart:0.00} EUR, amount {AmountAtStart}";
