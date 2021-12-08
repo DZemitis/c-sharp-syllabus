@@ -38,9 +38,9 @@ namespace Exercise_7
             foreach (var dog in DogTest)
             {
                 Console.WriteLine($"{dog.fathersName()}");
-                Console.WriteLine($"{dog.SameMother(Rocky)}" + " " + dog.HasSameMother(dog, Rocky));
                 Console.WriteLine();
             }
+            Console.WriteLine($"{Coco.SameMother(Rocky)}" + " " + Coco.HasSameMother(Coco, Rocky));
         }
     }
 }

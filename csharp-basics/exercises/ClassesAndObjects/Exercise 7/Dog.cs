@@ -31,14 +31,7 @@ namespace Exercise_7
         }
         public bool HasSameMother(Dog dog, Dog otherDog)
         {
-            if (dog.Mother == otherDog.Mother)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return dog.Mother == otherDog.Mother;
         }
         public override string ToString()
         {
