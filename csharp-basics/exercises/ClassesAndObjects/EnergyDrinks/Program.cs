@@ -8,10 +8,11 @@ namespace EnergyDrinks
         private const double PurchasedEnergyDrinks = 0.14;
         private const double PreferCitrusDrinks = 0.64;
 
+
         private static void Main(string[] args)
         {
             var energyDrinkers = CalculateEnergyDrinkers(NumberedSurveyed, PurchasedEnergyDrinks);
-            
+
 
             Console.WriteLine("Total number of people surveyed " + NumberedSurveyed);
             Console.WriteLine("Approximately " + CalculateEnergyDrinkers(NumberedSurveyed, PurchasedEnergyDrinks) + " bought at least one energy drink");
