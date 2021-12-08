@@ -29,11 +29,9 @@ namespace Exercise_9
 
         public static void SwapPoints(Point x, Point z)
         {
-            var temp = new Point(x.X, x.Y);
-            x.X = z.X;
-            x.Y = z.Y;
-            z.X = temp.X;
-            z.Y = temp.Y;
+            var (X, Y) = (x.X, x.Y);
+            (x.X, x.Y) = (z.X, z.Y);
+            (z.X, z.Y) = (X, Y);
         }
     }
 }
