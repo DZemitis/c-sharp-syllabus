@@ -22,7 +22,6 @@ namespace Exercise_9
 
             SwapPoints(p1, p2);
 
-
             Console.WriteLine("(" + p1.X + ", " + p1.Y + ")");
             Console.WriteLine("(" + p2.X + ", " + p2.Y + ")");
 
@@ -30,9 +29,11 @@ namespace Exercise_9
 
         public static void SwapPoints(Point x, Point z)
         {
-            var temp = x;
-            x = z;
-            z = temp;
+            var temp = new Point(x.X, x.Y);
+            x.X = z.X;
+            x.Y = z.Y;
+            z.X = temp.X;
+            z.Y = temp.Y;
         }
     }
 }
