@@ -1,21 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace VideoStore
+﻿namespace VideoStore
 {
     class VideoStore
     {
-
+        public int UserRating;
+        public int AvarageUserRating;
+        public int UsersRated;
         public VideoStore()
         {
-            
+
         }
 
         public void AddVideo(string title)
         {
-            
         }
-        
+
         public void Checkout(string title)
         {
 
@@ -27,12 +25,14 @@ namespace VideoStore
 
         public void TakeUsersRating(double rating, string title)
         {
-            
+            UsersRated++;
+            UserRating += UserRating;
+            AvarageUserRating = UserRating / UsersRated;
         }
 
         public void ListInventory()
         {
-            
+
         }
     }
 }

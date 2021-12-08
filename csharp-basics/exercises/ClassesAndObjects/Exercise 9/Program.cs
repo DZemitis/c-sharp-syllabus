@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.CompilerServices;
 
 namespace Exercise_9
 {
@@ -24,14 +25,17 @@ namespace Exercise_9
 
             Console.WriteLine("(" + p1.X + ", " + p1.Y + ")");
             Console.WriteLine("(" + p2.X + ", " + p2.Y + ")");
-
         }
 
         public static void SwapPoints(Point x, Point z)
         {
-            var (X, Y) = (x.X, x.Y);
-            (x.X, x.Y) = (z.X, z.Y);
-            (z.X, z.Y) = (X, Y);
+            //var (X, Y) = (x.X, x.Y);
+            //(x.X, x.Y) = (z.X, z.Y);
+            //(z.X, z.Y) = (X, Y);
+            x.X = z.X;
+            z.X = x.X;
+            x.Y = z.Y;
+            z.Y = x.Y;
         }
     }
 }
