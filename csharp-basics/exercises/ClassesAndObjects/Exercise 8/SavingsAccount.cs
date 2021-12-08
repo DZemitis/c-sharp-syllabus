@@ -3,13 +3,13 @@
     class SavingsAccount
     {
 
-        private float _balance { get; set; }
-        private float _endBalance { get; set; }
+        private float _balance;
+        private float _endBalance;
         public float AnnualInterestRate { get; set; }
-        private float _totalDeposit { get; set; }
-        private float _totalWithdrawal { get; set; }
-        private float _monthlyInterest { get; set; }
-        private float _interestGain { get; set; }
+        private float _totalDeposit;
+        private float _totalWithdrawal;
+        private float _monthlyInterest;
+        private float _interestGain;
 
         public SavingsAccount(float startingBalance)
         {
