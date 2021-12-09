@@ -30,11 +30,5 @@
         {
             return $"{_name}: {_money}";
         }
-
-        public string Name
-        {
-            get => _name;
-            set => _name = value;
-        }
     }
 }

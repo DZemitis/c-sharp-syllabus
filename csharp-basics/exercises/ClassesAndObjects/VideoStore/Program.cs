@@ -12,6 +12,7 @@ namespace VideoStore
         private static VideoStore _videoStore = new VideoStore();
         private static void Main(string[] args)
         {
+            Video matrix = new Video("matrix");
             while (true)
             {
                 Console.WriteLine("Choose the operation you want to perform ");
@@ -76,7 +77,9 @@ namespace VideoStore
         {
             Console.WriteLine("Enter movie name");
             string movieName = Console.ReadLine();
-            _videoStore.ReturnVideo(movieName);
+            Console.WriteLine("Enter rating for movie");
+            var userRating = double.Parse(Console.ReadLine());
+            _videoStore.ReturnVideo(movieName, userRating);
         }
     }
 }

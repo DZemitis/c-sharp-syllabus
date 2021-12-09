@@ -1,32 +1,28 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 
 namespace VideoStore
 {
    public class Video
     {
-        private string Title;
-        public bool BeeingCheckedOut;
-        private List<double> _rating;
+        public string Title;
+        public bool CheckedOut;
+        public List<double> _rating;
         public Video(string title)
         {
             Title = title;
             _rating = new List<double>();
         }
 
-        public Video(string title, int rating) : this(title)
-        {
-            
-        }
-
         public void BeingCheckedOut()
         {
-            BeeingCheckedOut = true;
+            CheckedOut = true;
         }
 
         public void BeingReturned()
         {
-
+            CheckedOut = false;
         }
 
         public void ReceivingRating(double rating)
@@ -41,7 +37,7 @@ namespace VideoStore
 
         public bool Available()
         {
-            return true;
+            return CheckedOut = false;
         }
 
         public override string ToString()

@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Exercise_3a
+﻿namespace Exercise_3a
 {
     class FuelGauge
     {

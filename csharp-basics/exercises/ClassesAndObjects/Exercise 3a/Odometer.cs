@@ -2,38 +2,38 @@
 {
     class Odometer
     {
-        public int Mileage;
-        public int KmPerLitter = 10;
-        public FuelGauge _FuelGauge;
+        private int _mileage;
+        private int _kmPerLitter = 10;
+        private FuelGauge _fuelGauge;
 
         public Odometer(int mileage, FuelGauge litters)
         {
-            Mileage = mileage;
-            _FuelGauge = litters;
+            _mileage = mileage;
+            _fuelGauge = litters;
         }
         public string ReportMileage()
         {
-            return $"{Mileage}";
+            return $"{_mileage}";
         }
 
         public void LimitOfOdometer()
         {
-            if (Mileage <= 999999)
+            if (_mileage <= 999999)
             {
-                Mileage++;
+                _mileage++;
             }
             else
             {
-                Mileage = 0;
+                _mileage = 0;
             }
         }
 
         public void BurnFuel()
         {
 
-            if (Mileage % KmPerLitter == 0)
+            if (_mileage % _kmPerLitter == 0)
             {
-                _FuelGauge.FuelLoss();
+                _fuelGauge.FuelLoss();
             }
         }
     }
