@@ -1,17 +1,15 @@
-﻿using System;
-
-namespace Exercise_3a
+﻿namespace Exercise_3a
 {
-    class Odometer : FuelGauge
+    class Odometer
     {
         public int Mileage;
         public int KmPerLitter = 10;
+        public FuelGauge _FuelGauge;
 
-        public Odometer(int mileage, int litters)
+        public Odometer(int mileage, FuelGauge litters)
         {
             Mileage = mileage;
-            CurrentLiters = litters;
-
+            _FuelGauge = litters;
         }
         public string ReportMileage()
         {
@@ -32,11 +30,11 @@ namespace Exercise_3a
 
         public void BurnFuel()
         {
+
             if (Mileage % KmPerLitter == 0)
             {
-                CurrentLiters--;
+                _FuelGauge.FuelLoss();
             }
         }
-
     }
 }

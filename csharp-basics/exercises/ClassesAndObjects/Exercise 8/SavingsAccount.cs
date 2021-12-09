@@ -4,7 +4,6 @@
     {
 
         private float _balance;
-        private float _endBalance;
         public float AnnualInterestRate { get; set; }
         private float _totalDeposit;
         private float _totalWithdrawal;
@@ -28,16 +27,12 @@
             _totalDeposit += depositAmount;
         }
 
-        public void OverallBalance(SavingsAccount account)
-        {
-            _endBalance = _balance + _interestGain;
-        }
-        public void MothlyInterest()
+        public void MonthlyInterest()
         {
             _monthlyInterest = AnnualInterestRate / 12;
         }
 
-        public void AddInterestToBilance()
+        public void AddInterestToBalance()
         {
             float interest = (_balance * _monthlyInterest);
 

@@ -4,8 +4,12 @@ namespace Exercise_3a
 {
     class FuelGauge
     {
-        public int CurrentLiters;
+        public int CurrentLiters { get; set; }
 
+        public FuelGauge(int liters)
+        {
+            CurrentLiters = liters;
+        }
         public string ReportCurrentLiters()
         {
             return $"{CurrentLiters}";

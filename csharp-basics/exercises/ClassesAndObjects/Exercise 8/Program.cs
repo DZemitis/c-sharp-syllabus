@@ -28,8 +28,8 @@ namespace Exercise_8
                 var userWithdrawal = float.Parse(Console.ReadLine());
                 account1.Withdrawal(userWithdrawal);
 
-                account1.MothlyInterest();
-                account1.AddInterestToBilance();
+                account1.MonthlyInterest();
+                account1.AddInterestToBalance();
             }
 
             Console.WriteLine($"Total deposited:{account1.DisplayTotalDeposit()}");
