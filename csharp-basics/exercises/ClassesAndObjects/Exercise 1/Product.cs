@@ -1,6 +1,5 @@
 ﻿namespace Exercise_1
 {
-
     class Product
     {
         public Product(string name, double price, int amount)
@@ -9,7 +8,8 @@
             PriceAtStart = price;
             AmountAtStart = amount;
         }
-        private string _name { get; set; }
+
+        private string _name;
         public double PriceAtStart { get; set; }
         public int AmountAtStart { get; set; }
 

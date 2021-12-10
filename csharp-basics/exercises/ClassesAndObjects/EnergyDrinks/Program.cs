@@ -13,11 +13,9 @@ namespace EnergyDrinks
         {
             var energyDrinkers = CalculateEnergyDrinkers(NumberedSurveyed, PurchasedEnergyDrinks);
 
-
             Console.WriteLine("Total number of people surveyed " + NumberedSurveyed);
             Console.WriteLine("Approximately " + CalculateEnergyDrinkers(NumberedSurveyed, PurchasedEnergyDrinks) + " bought at least one energy drink");
             Console.WriteLine(CalculatePreferCitrus(energyDrinkers, PreferCitrusDrinks) + " of those " + "prefer citrus flavored energy drinks.");
-
         }
 
 

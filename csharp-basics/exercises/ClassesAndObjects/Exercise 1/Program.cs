@@ -20,6 +20,7 @@ namespace Exercise_1
                 product3,
                 product4
             };
+
             foreach (var prod in products)
             {
                 Console.WriteLine(prod.PrintProduct());
