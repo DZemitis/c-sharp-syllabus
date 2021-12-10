@@ -1,14 +1,14 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
 
 namespace VideoStore
 {
-   public class Video
+    public class Video
     {
         public string Title;
-        public bool CheckedOut;
-        public List<double> _rating;
+        private bool _checkedOut;
+        private List<double> _rating;
+
         public Video(string title)
         {
             Title = title;
@@ -17,12 +17,12 @@ namespace VideoStore
 
         public void BeingCheckedOut()
         {
-            CheckedOut = true;
+            _checkedOut = true;
         }
 
         public void BeingReturned()
         {
-            CheckedOut = false;
+            _checkedOut = false;
         }
 
         public void ReceivingRating(double rating)
@@ -30,19 +30,41 @@ namespace VideoStore
             _rating.Add(rating);
         }
 
+        public string DisplayProcentageLiked()
+        {
+            var positive = 0;
+            var negative = 0;
+            foreach (var n in _rating)
+            {
+                if (n > 5)
+                {
+                    positive++;
+                }
+                else
+                {
+                    negative++;
+                }
+            }
+
+            var total = positive + negative;
+            return $"{positive * 100 / total}";
+        }
+
         public double AverageRating()
         {
             return _rating.Average();
         }
 
-        public bool Available()
-        {
-            return CheckedOut = false;
-        }
-
         public override string ToString()
         {
-            return $"{Title} {AverageRating()} {Available()}";
+            if (_checkedOut == false)
+            {
+                return $"Available: {Title}. With average rating of: {AverageRating()}, positivity of {DisplayProcentageLiked()}%";
+            }
+            else
+            {
+                return $"{Title} is not available right now!";
+            }
         }
     }
 }

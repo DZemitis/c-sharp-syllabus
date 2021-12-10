@@ -5,38 +5,55 @@ namespace VideoStore
 {
     class VideoStore
     {
-        public List<string> VideoList;
-        public List<Video> Videos;
+
+        private List<Video> _videos = new List<Video>();
 
 
         public VideoStore()
         {
-            VideoList = new List<string>();
-            Videos = new List<Video>();
+
         }
 
         public void AddVideo(string title)
         {
-            VideoList.Add(title);
+            _videos.Add(new Video(title));
         }
 
         public void Checkout(string title)
         {
-            VideoList.Remove(title);
+            foreach (Video video in _videos)
+            {
+                if (video.Title == title)
+                {
+                    video.BeingCheckedOut();
+                    return;
+                }
+            }
         }
 
-        public void ReturnVideo(string title, double userRating)
+        public void ReturnVideo(string title)
         {
-            VideoList.Add(title);
-            TakeUsersRating(userRating, title);
+            foreach (Video video in _videos)
+            {
+                if (video.Title == title)
+                {
+                    video.BeingReturned();
+                    return;
+                }
+            }
+
         }
 
 
         public void TakeUsersRating(double rating, string title)
         {
-            foreach (Video video in Videos)
+            foreach (Video video in _videos)
             {
-                if (video.Title == title) { video.ReceivingRating(rating); return; }
+                if (video.Title == title)
+                {
+                    video.ReceivingRating(rating);
+                    return;
+                }
             }
 
             Console.WriteLine("Video not found");
@@ -44,7 +61,7 @@ namespace VideoStore
 
         public void ListInventory()
         {
-            foreach (var c in VideoList)
+            foreach (var c in _videos)
             {
                 Console.WriteLine(c);
             }

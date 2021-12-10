@@ -7,6 +7,25 @@ namespace Account
     {
         private static void Main(string[] args)
         {
+            Account a = new Account("A", 100);
+            Account b = new Account("B", 0);
+            Account c = new Account("C", 0);
+            Transfer(a, b, 50);
+            Transfer(b, c, 25);
+            var accounts = new List<Account>
+            {
+                a,
+                b,
+                c
+            };
+            foreach (var x in accounts)
+            {
+                Console.WriteLine(x.Balance());
+            }
+        }
+
+        public static void bartosAcount()
+        {
             Account bartosAccount = new Account("Barto's account", 100.00);
             Account bartosSwissAccount = new Account("Barto's account in Switzerland", 1000000.00);
 
@@ -23,22 +42,6 @@ namespace Account
             Console.WriteLine(bartosAccount);
             Console.WriteLine(bartosSwissAccount);
             Console.WriteLine();
-
-            Account a = new Account("A", 100);
-            Account b = new Account("B", 0);
-            Account c = new Account("C", 0);
-            Transfer(a, b, 50);
-            Transfer(b, c, 25);
-            var accounts = new List<Account>
-            {
-                a,
-                b,
-                c
-            };
-            foreach (var x in accounts)
-            {
-                Console.WriteLine(x.Balance());
-            }
         }
 
         public static void test()

@@ -20,6 +20,7 @@ namespace EnergyDrinks
 
         }
 
+
         public static double CalculateEnergyDrinkers(double numSurveyed, double purchased)
         {
             return Program.NumberedSurveyed * Program.PurchasedEnergyDrinks;
