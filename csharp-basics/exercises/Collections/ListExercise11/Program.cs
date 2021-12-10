@@ -7,7 +7,6 @@ namespace ListExercise11
     {
         static void Main(string[] args)
         {
-            //TODO: Create an List with string elements
             var strings = new List<string>()
             {
                 "A",
