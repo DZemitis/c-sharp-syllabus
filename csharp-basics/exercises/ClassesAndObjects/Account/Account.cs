@@ -7,17 +7,18 @@
 
         public Account(string v1, double v2)
         {
-            
+            _name = v1;
+            _money = v2;
         }
 
         public double Withdrawal(double i)
         {
-            return i;
+            return _money -= i;
         }
 
-        public void Deposit(double i)
+        public double Deposit(double i)
         {
-            
+            return _money += i;
         }
 
         public double Balance()
@@ -28,12 +29,6 @@
         public override string ToString()
         {
             return $"{_name}: {_money}";
-        }
-
-        public string Name
-        {
-            get => _name;
-            set => _name = value;
         }
     }
 }
