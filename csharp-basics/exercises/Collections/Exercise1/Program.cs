@@ -19,6 +19,7 @@ namespace Exercise1
             Console.WriteLine();
 
             var hashCars = new HashSet<string>(array);
+
             foreach (var x in hashCars)
             {
                 Console.WriteLine(x);
@@ -26,7 +27,7 @@ namespace Exercise1
 
             Console.WriteLine();
 
-            SortedList sortedCars = new SortedList();
+            var sortedCars = new Dictionary<string, string>();
             sortedCars.Add("Audi", "Germany");
             sortedCars.Add("BMW", "Germany");
             sortedCars.Add("Honda", "Japan");
@@ -34,19 +35,10 @@ namespace Exercise1
             sortedCars.Add("VolksWagen", "Germany");
             sortedCars.Add("Tesla", "USA");
 
-            PrintKeysAndValues(sortedCars);
-        }
-
-        public static void PrintKeysAndValues(SortedList myList)
-        {
-            Console.WriteLine("Brand       -> -Origin-");
-
-            for (int i = 0; i < myList.Count; i++)
+            foreach (var x in sortedCars)
             {
-                Console.WriteLine($"{myList.GetKey(i), -11} -> {myList.GetByIndex(i)}");
+                Console.WriteLine($"{x.Key, -11} -> {x.Value}");
             }
-
-            Console.WriteLine();
         }
     }
 }
