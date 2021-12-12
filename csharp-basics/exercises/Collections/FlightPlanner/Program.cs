@@ -28,7 +28,6 @@ namespace FlightPlanner
                 Console.Clear();
                 Console.WriteLine("Come again");
             }
-            
         }
 
         private static void AddData()
