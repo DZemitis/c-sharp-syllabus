@@ -26,7 +26,6 @@ namespace Histogram
                 {"80-89", String.Empty},
                 {"90-99", String.Empty},
                 {"100", String.Empty},
-
             };
 
             var entries = Regex.Split(readText, @" ");
