@@ -24,8 +24,11 @@ namespace Firm
                 "555-8374");
             staffList[5] = new Volunteer("Cliff", "321 Duds Lane",
                 "555-7282");
-            ((Executive) staffList[0]).AwardBonus(500.00);
-            ((Hourly) staffList[3]).AddHours(40);
+            staffList[6] = new Manager("John", "103 Sixth Ave.",
+                "565-0209", "980-85-2121", 2246.15, 0.03);
+            ((Executive)staffList[0]).AwardBonus(500.00);
+            ((Manager)staffList[6]).AwardBonus(300.00);
+            ((Hourly)staffList[3]).AddHours(40);
         }
 
         //-----------------------------------------------------------------

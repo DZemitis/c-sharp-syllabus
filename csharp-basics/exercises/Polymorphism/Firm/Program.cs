@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Firm
+﻿namespace Firm
 {
     class Program
     {
@@ -11,6 +9,7 @@ namespace Firm
         {
             var personnel = new Staff();
             personnel.Payday();
+
         }
     }
 }
