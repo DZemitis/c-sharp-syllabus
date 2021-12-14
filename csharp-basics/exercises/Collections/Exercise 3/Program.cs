@@ -6,16 +6,16 @@ namespace Exercise_3
 {
     class Program
     {
-        public static bool inputHappens = true;
         public static List<string> names = new List<string>();
 
         static void Main(string[] args)
         {
-            inputNames();
-            printNamees();
+            bool inputHappens = true;
+            InputNames(inputHappens);
+            PrintNamees();
         }
 
-        public static void inputNames()
+        public static void InputNames(bool inputHappens)
         {
             Console.WriteLine("Enter list of names, pres Enter after done");
 
@@ -33,13 +33,12 @@ namespace Exercise_3
             }
         }
 
-        public static void printNamees()
+        public static void PrintNamees()
         {
             List<string> distinct = names.Distinct().ToList();
             foreach (var x in distinct)
             {
                 Console.WriteLine(x);
-
             }
         }
     }
