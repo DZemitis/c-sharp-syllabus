@@ -6,12 +6,9 @@ namespace Firm
     {
         StaffMember[] staffList;
 
-        //-----------------------------------------------------------------
-        // Sets up the list of staff members.
-        //-----------------------------------------------------------------
         public Staff()
         {
-            staffList = new StaffMember[6];
+            staffList = new StaffMember[8];
             staffList[0] = new Executive("Sam", "123 Main Line",
                 "555-0469", "123-45-6789", 2423.07);
             staffList[1] = new Employee("Carla", "456 Off Line",
@@ -24,16 +21,18 @@ namespace Firm
                 "555-8374");
             staffList[5] = new Volunteer("Cliff", "321 Duds Lane",
                 "555-7282");
-            staffList[6] = new Manager("John", "103 Sixth Ave.",
-                "565-0209", "980-85-2121", 2246.15, 0.03);
+            staffList[6] = new CommissionGuy("John", "103 Sixth Ave.",
+                "565-0209", "980-85-2121", 6.25, 0.2);
+            staffList[7] = new CommissionGuy("Bertha", "104 Sixth Ave.",
+                "565-0000", "980-85-0000", 9.75, 0.15);
             ((Executive)staffList[0]).AwardBonus(500.00);
-            ((Manager)staffList[6]).AwardBonus(300.00);
+            ((CommissionGuy)staffList[6]).TotalSalesBonus(400);
+            ((CommissionGuy)staffList[7]).TotalSalesBonus(950);
             ((Hourly)staffList[3]).AddHours(40);
+            ((Hourly)staffList[6]).AddHours(35);
+            ((Hourly)staffList[7]).AddHours(40);
         }
 
-        //-----------------------------------------------------------------
-        // Pays all staff members.
-        //-----------------------------------------------------------------
         public void Payday()
         {
             foreach (var staff in staffList)
