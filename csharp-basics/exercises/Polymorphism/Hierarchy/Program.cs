@@ -13,13 +13,13 @@ namespace Hierarchy
                 new Vegetable(5),
                 new Meat(10)
             };
-            
-            
+
             var animals = new List<Animal>()
             {
                 new Cat("Gray", "Cat", 1.1, 4, "Home", "Persian"),
                 new Tiger("Typcho", "Tiger", 167.7, 4, "Asia")
             };
+
             foreach (var x in animals)
             {
                 Console.WriteLine(x.DisplayAnimal());
