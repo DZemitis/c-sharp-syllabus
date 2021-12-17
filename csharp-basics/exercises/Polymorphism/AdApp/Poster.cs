@@ -2,7 +2,6 @@
 {
     public class Poster : Advert
     {
-
         private int _copies;
         private int _costPerCopy;
 

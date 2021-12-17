@@ -13,7 +13,8 @@ namespace AdApp
 
         public override int Cost()
         {
-            return base.Cost() + _rate * _column;
+            var baseCost = base.Cost();
+            return baseCost + _rate * _column;
         }
 
         public override string ToString()

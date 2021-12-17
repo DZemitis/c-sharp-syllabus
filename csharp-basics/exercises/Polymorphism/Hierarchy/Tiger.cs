@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Hierarchy
+﻿namespace Hierarchy
 {
     public class Tiger : Feline
     {
@@ -15,7 +13,6 @@ namespace Hierarchy
 
         public override string EatFood(Food type)
         {
-
             if (type is Meat)
             {
                 FoodEaten += type.Quantity;
@@ -26,6 +23,7 @@ namespace Hierarchy
                 return $"{AnimalType} are not eating that type of food!";
             }
         }
+
         public override string ToString()
         {
             return $"{AnimalType} [{AnimalName}, {AnimalWeight}, {LivingRegion}, {FoodEaten}]";

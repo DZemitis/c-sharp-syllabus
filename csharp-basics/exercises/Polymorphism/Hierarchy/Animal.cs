@@ -17,7 +17,6 @@
 
         public abstract string MakeSound();
 
-
         public abstract string EatFood(Food type);
 
         public virtual string DisplayAnimal()

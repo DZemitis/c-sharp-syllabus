@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Hierarchy
+﻿namespace Hierarchy
 {
     public class Mouse : Mammal
     {
@@ -25,6 +23,7 @@ namespace Hierarchy
                 return $"{AnimalType} are not eating that type of food!";
             }
         }
+
         public override string ToString()
         {
             return $"{AnimalType} [{AnimalName}, {AnimalWeight}, {LivingRegion}, {FoodEaten}]";
