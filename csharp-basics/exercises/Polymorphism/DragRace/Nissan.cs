@@ -1,8 +1,8 @@
-using System;
+﻿using System;
 
 namespace DragRace
 {
-    public class Audi : ICar
+    public class Nissan : ICar, IBoostable
     {
         private int _currentSpeed = 0;
 
@@ -23,7 +23,11 @@ namespace DragRace
 
         public void StartEngine()
         {
-            Console.WriteLine("Rrrrrrr.....");
+            Console.WriteLine("Brum.. Brum..");
+        }
+        public void UseNitrousOxideEngine()
+        {
+            _currentSpeed += 25;
         }
     }
 }
