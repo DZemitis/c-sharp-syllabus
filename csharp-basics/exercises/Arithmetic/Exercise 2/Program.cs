@@ -7,18 +7,8 @@ namespace Exercise_2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter number to check if its Odd or Even!");
-            int number = int.Parse(Console.ReadLine());
-            CheckOddEven(number);
-            Console.WriteLine("bye!");
-        }
-
-        static void CheckOddEven(int number)
-        {
-            if (number % 2 == 0)
-                Console.WriteLine("Even Number");
-            else
-                Console.WriteLine("Odd Number");
+            var x = new OddOrEven(15);
+            Console.WriteLine(x.CheckOddOrEven());
         }
     }
 }
