@@ -8,7 +8,6 @@ namespace Exercise2.Tests
     {
         private OddOrEven _target;
 
-
         [Fact]
         public void NumberIsOdd_GivenNumberIsOdd_ShouldReturnOdd()
         {
