@@ -12,7 +12,7 @@ namespace ConsoleApp8
             int number2 = int.Parse(Console.ReadLine());
 
             var magicNumber = new Magic15(number1, number2);
-            Console.WriteLine(magicNumber.CheckIfSumOrNumberIs15());
+            Console.WriteLine(magicNumber.CheckIf15());
         }
     }
 }

@@ -11,7 +11,7 @@
             _number2 = number2;
         }
 
-        public bool CheckIfSumOrNumberIs15()
+        public bool CheckIf15()
         {
             var number1 = _number1;
             var number2 = _number2;

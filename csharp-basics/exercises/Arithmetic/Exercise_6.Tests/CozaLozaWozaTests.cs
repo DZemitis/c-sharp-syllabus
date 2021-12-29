@@ -1,7 +1,4 @@
-using System;
-using System.Security.Cryptography;
 using Xunit;
-using Exercise_6;
 
 namespace Exercise_6.Tests
 {
@@ -15,14 +12,14 @@ namespace Exercise_6.Tests
             //Arrange
             _target = new CozaLozaWoza();
             var name = "Coza";
-            var numberby3 = "15";
+            var numberBy3 = "15";
 
             //Act
             var result = _target.PrintCozaLozaWoza();
 
             //Assert
             Assert.Contains(name, result);
-            Assert.DoesNotContain(numberby3, result);
+            Assert.DoesNotContain(numberBy3, result);
         }
 
         [Fact]
@@ -31,14 +28,14 @@ namespace Exercise_6.Tests
             //Arrange
             _target = new CozaLozaWoza();
             var name = "Woza";
-            var numberby7 = "14";
+            var numberBy7 = "14";
 
             //Act
             var result = _target.PrintCozaLozaWoza();
 
             //Assert
             Assert.Contains(name, result);
-            Assert.DoesNotContain(numberby7, result);
+            Assert.DoesNotContain(numberBy7, result);
         }
 
         [Fact]
@@ -47,14 +44,14 @@ namespace Exercise_6.Tests
             //Arrange
             _target = new CozaLozaWoza();
             var name = "Loza";
-            var numberby5 = "20";
+            var numberBy5 = "20";
 
             //Act
             var result = _target.PrintCozaLozaWoza();
 
             //Assert
             Assert.Contains(name, result);
-            Assert.DoesNotContain(numberby5, result);
+            Assert.DoesNotContain(numberBy5, result);
         }
 
         [Fact]
@@ -63,14 +60,14 @@ namespace Exercise_6.Tests
             //Arrange
             _target = new CozaLozaWoza();
             var name = "CozaLoza";
-            var numberby5And3 = "30";
+            var numberBy5And3 = "30";
 
             //Act
             var result = _target.PrintCozaLozaWoza();
 
             //Assert
             Assert.Contains(name, result);
-            Assert.DoesNotContain(numberby5And3, result);
+            Assert.DoesNotContain(numberBy5And3, result);
         }
 
         [Fact]
@@ -79,14 +76,14 @@ namespace Exercise_6.Tests
             //Arrange
             _target = new CozaLozaWoza();
             var name = "WozaLoza";
-            var numberby7And5 = "35";
+            var numberBy7And5 = "35";
 
             //Act
             var result = _target.PrintCozaLozaWoza();
 
             //Assert
             Assert.Contains(name, result);
-            Assert.DoesNotContain(numberby7And5, result);
+            Assert.DoesNotContain(numberBy7And5, result);
         }
 
         [Fact]
@@ -95,14 +92,14 @@ namespace Exercise_6.Tests
             //Arrange
             _target = new CozaLozaWoza();
             var name = "CozaWoza";
-            var numberby7And3 = "21";
+            var numberBy7And3 = "21";
 
             //Act
             var result = _target.PrintCozaLozaWoza();
 
             //Assert
             Assert.Contains(name, result);
-            Assert.DoesNotContain(numberby7And3, result);
+            Assert.DoesNotContain(numberBy7And3, result);
         }
     }
 }
