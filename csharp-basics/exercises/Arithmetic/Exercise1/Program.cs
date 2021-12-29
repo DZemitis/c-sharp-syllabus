@@ -10,13 +10,9 @@ namespace ConsoleApp8
             int number1 = int.Parse(Console.ReadLine());
             Console.WriteLine("Enter second number");
             int number2 = int.Parse(Console.ReadLine());
-            Console.WriteLine(CheckIfTrue(number1, number2));
-        }
 
-        public static bool CheckIfTrue(int number1, int number2)
-        {
-            return (number1 + number2 == 15 || number2 - number1 == 15 || number1 == 15 || number2 == 15 ||
-                    number1 - number2 == 15);
+            var magicNumber = new Magic15(number1, number2);
+            Console.WriteLine(magicNumber.CheckIfSumOrNumberIs15());
         }
     }
 }
