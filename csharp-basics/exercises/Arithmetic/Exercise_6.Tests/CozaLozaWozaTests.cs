@@ -6,11 +6,14 @@ namespace Exercise_6.Tests
     {
         private CozaLozaWoza _target;
 
+        public CozaLozaWozaTests()
+        {
+            _target = new CozaLozaWoza();
+        }
         [Fact]
         public void PrintsCoza_PrintCozaInsteadOffNumbersModulo3_ShouldReturnCoza()
         {
             //Arrange
-            _target = new CozaLozaWoza();
             var name = "Coza";
             var numberBy3 = "15";
 
@@ -26,7 +29,6 @@ namespace Exercise_6.Tests
         public void PrintsWoza_PrintWozaInsteadOffNumbersModulo7_ShouldReturnWoza()
         {
             //Arrange
-            _target = new CozaLozaWoza();
             var name = "Woza";
             var numberBy7 = "14";
 
@@ -42,7 +44,6 @@ namespace Exercise_6.Tests
         public void PrintsLoza_PrintLozaInsteadOffNumbersModulo5_ShouldReturnLoza()
         {
             //Arrange
-            _target = new CozaLozaWoza();
             var name = "Loza";
             var numberBy5 = "20";
 
@@ -58,7 +59,6 @@ namespace Exercise_6.Tests
         public void PrintsCozaLoza_PrintCozaLozaInsteadOffNumbersModulo5And3_ShouldReturnCozaLoza()
         {
             //Arrange
-            _target = new CozaLozaWoza();
             var name = "CozaLoza";
             var numberBy5And3 = "30";
 
@@ -74,7 +74,6 @@ namespace Exercise_6.Tests
         public void PrintsWozaLoza_PrintWozaLozaInsteadOffNumbersModulo7And5_ShouldReturnWozaLoza()
         {
             //Arrange
-            _target = new CozaLozaWoza();
             var name = "WozaLoza";
             var numberBy7And5 = "35";
 
@@ -90,7 +89,6 @@ namespace Exercise_6.Tests
         public void CozaWoza_PrintCozaWozaInsteadOffNumbersModulo7And3_ShouldReturnCozaWoza()
         {
             //Arrange
-            _target = new CozaLozaWoza();
             var name = "CozaWoza";
             var numberBy7And3 = "21";
 
