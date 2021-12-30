@@ -1,14 +1,14 @@
 ﻿namespace Account
 {
-    class Account
+    public class Account
     {
         private string _name;
         private double _money;
 
-        public Account(string v1, double v2)
+        public Account(string name, double money)
         {
-            _name = v1;
-            _money = v2;
+            _name = name;
+            _money = money;
         }
 
         public double Withdrawal(double i)
