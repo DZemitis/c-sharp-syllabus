@@ -8,7 +8,6 @@ namespace WordCount
 {
     public class TextCalculator
     {
-        private string _text;
         private List<string> _lines;
         private string _allText;
 

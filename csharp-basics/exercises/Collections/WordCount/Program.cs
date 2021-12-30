@@ -12,23 +12,6 @@ namespace WordCount
             string filePath = "../../lear.txt";
             var lines =  File.ReadAllLines(filePath).ToList();
             var text = new TextCalculator(lines);
-            var allText = string.Empty;
-            foreach (var z in lines)
-            {
-                allText += z;
-            }
-
-            Console.WriteLine(allText);
-            var x = allText.Split(' ',',');
-            var count = 0;
-            foreach (var n in x)
-            {
-                Console.WriteLine(n);
-                count++;
-
-            }
-
-            Console.WriteLine(count);
             
             Console.WriteLine($"Lines = {text.LinesCount()}");
             Console.WriteLine($"Words = {text.WordsCount()}");
