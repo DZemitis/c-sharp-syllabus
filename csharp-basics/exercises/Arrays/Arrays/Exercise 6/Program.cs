@@ -6,12 +6,11 @@ namespace Exercise_6
     {
         static void Main(string[] args)
         {
-            var newArray1 = new MakeArray();
-            newArray1.RandomArray();
-            Console.WriteLine(newArray1.PrintArray("newArray1"));
-
-            var copyArray = newArray1.CloneChangeLastNegative7();
-            Console.WriteLine(PrintArray(copyArray, "copyArray"));
+            var arrayMethod = new MakeArray();
+            var array1 = arrayMethod.RandomArray();
+            var array2 = arrayMethod.ClonedArray(array1);
+            Console.WriteLine(arrayMethod.PrintArray("Array1"));
+            Console.WriteLine(PrintArray(array2, "Array2"));
         }
 
         private static string PrintArray(int[] array, string name)

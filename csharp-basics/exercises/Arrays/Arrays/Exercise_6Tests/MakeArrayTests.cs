@@ -24,21 +24,22 @@ namespace Exercise_6Tests
         }
 
         [Fact]
-        public void CloneChangeLast_ArraysAreDifferent_ShouldBeDifferent()
+        public void ClonedArray_ArraysAreDifferent_ShouldBeDifferent()
         {
             // Act
             var array1 = _target.RandomArray();
-            var array2 = _target.CloneChangeLastNegative7();
+            var array2 = _target.ClonedArray(array1);
 
             // Assert
             Assert.NotEqual(array1, array2);
         }
 
         [Fact]
-        public void CloneChangeLast_LastIndexIsNegative7_ShouldBeMatch()
+        public void ClonedArray_LastIndexIsNegative7_ShouldBeMatch()
         {
             // Act
-            var array2 = _target.CloneChangeLastNegative7();
+            var array1 = _target.RandomArray();
+            var array2 = _target.ClonedArray(array1);
 
             // Assert
             Assert.Equal(-7, array2[9]);
