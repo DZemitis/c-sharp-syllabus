@@ -94,7 +94,7 @@ namespace Exercise_5.Tests
         }
 
         [Fact]
-        public void Display_GivenMonthDayYear_ShoulContainMonthDayYear()
+        public void Display_GivenMonthDayYear_ShouldContainMonthDayYear()
         {
             //Arrange
             var dateTest = "9/22/1989";

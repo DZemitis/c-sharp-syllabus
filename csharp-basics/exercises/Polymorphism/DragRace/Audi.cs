@@ -6,14 +6,14 @@ namespace DragRace
     {
         private int _currentSpeed = 0;
 
-        public void SpeedUp()
+        public int SpeedUp()
         {
-            _currentSpeed += 10;
+           return _currentSpeed += 10;
         }
 
-        public void SlowDown()
+        public int SlowDown()
         {
-            _currentSpeed -= 10;
+           return _currentSpeed -= 10;
         }
 
         public string ShowCurrentSpeed()
@@ -21,9 +21,9 @@ namespace DragRace
             return _currentSpeed.ToString();
         }
 
-        public void StartEngine()
+        public string StartEngine()
         {
-            Console.WriteLine("Rrrrrrr.....");
+            return "Rrrrrrr.....";
         }
     }
 }
