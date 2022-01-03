@@ -1,7 +1,4 @@
-using System;
 using Xunit;
-using GravityCalculator;
-using Xunit.Abstractions;
 
 namespace GravityCalculator.Tests
 {
@@ -15,7 +12,7 @@ namespace GravityCalculator.Tests
         }
 
         [Fact]
-        public void CalculateFinalPosition_FinalPositionCheck_ShouldReturnDouble()
+        public void CalcFinalPosition_FinalPositionCheck_ShouldMatch()
         {
             //Act
             var finalPosition = _target.CalcFinalPosition();

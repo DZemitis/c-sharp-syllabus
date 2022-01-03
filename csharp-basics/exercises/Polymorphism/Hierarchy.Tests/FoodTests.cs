@@ -10,7 +10,10 @@ namespace Hierarchy.Tests
 
         public FoodTests()
         {
-            _foodTarget = new List<Food>() {new Meat(10), new Vegetable(10)};
+            _foodTarget = new List<Food>()
+            {
+                new Meat(10),
+            };
         }
 
         [Fact]
@@ -20,10 +23,10 @@ namespace Hierarchy.Tests
             var foodToString = $"Meat 10";
             
             //Act
-            var foodGivenNameQTY = _foodTarget[0].ToString();
+            var foodGivenQty = _foodTarget[0].ToString();
 
             //Assert
-            Assert.Contains(foodToString, foodGivenNameQTY);
+            Assert.Contains(foodToString, foodGivenQty);
         }
     }
 }

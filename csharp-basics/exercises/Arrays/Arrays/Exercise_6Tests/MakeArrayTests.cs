@@ -13,7 +13,7 @@ namespace Exercise_6Tests
         }
 
         [Fact]
-        public void ArraysAreRandom_Array1IsDifferentFromArray2_ShouldBeDifferent()
+        public void RandomArray_Array1IsDifferentFromArray2_ShouldBeDifferent()
         {
             // Act
             var array1 = _target.RandomArray();

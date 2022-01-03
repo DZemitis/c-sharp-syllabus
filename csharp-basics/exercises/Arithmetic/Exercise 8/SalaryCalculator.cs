@@ -4,17 +4,22 @@ namespace Exercise_8
 {
     public class SalaryCalculator
     {
-        private int _minimumPay = 8;
-        private int _maxHours = 40;
+        private decimal _minHourlyRate = 8;
+        private decimal _maxHours = 60;
 
-        public decimal Calculate(decimal basePay, decimal hoursWorked)
+
+        public decimal SalaryCalc(decimal hourlyRate, decimal hoursWorked)
         {
-            if (hoursWorked > 40)
-            {
-                return Math.Round(basePay * 40 + (decimal) 1.5 * basePay * (hoursWorked - 40), 2);
-            }
+            if (hourlyRate < _minHourlyRate)
+                throw new Exception("Error, not possible");
 
-            return Math.Round(basePay * hoursWorked);
+            if (hoursWorked > _maxHours)
+                throw new Exception("Error, not possible");
+
+            if (hoursWorked > 40)
+                return Math.Round(hourlyRate * 40 + (decimal)1.5 * hourlyRate * (hoursWorked - 40), 2);
+
+            return Math.Round(hourlyRate * hoursWorked, 2);
         }
     }
 }

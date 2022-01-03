@@ -5,24 +5,21 @@ namespace DragRace.TEST
 {
     public class IBoostableTests
     {
-        private IBoostable _target;
+        private IBoostable _nissan;
+        private IBoostable _lexus;
 
         public IBoostableTests()
         {
-            _target = new Nissan();
+            _nissan = new Nissan();
+            _lexus = new Lexus();
         }
 
         [Fact]
         public void UseNitrousOxideEngine_UseNitro25_ShouldBeEqual()
         {
-            //Arrange
-            var useNitroOxideEngine = 25;
-
-            //Act
-            var givenNitroOxideValue = _target.UseNitrousOxideEngine();
-
             //Assert
-            Assert.Equal(useNitroOxideEngine, givenNitroOxideValue);
+            Assert.Equal(25, _lexus.UseNitrousOxideEngine());
+            Assert.Equal(25, _nissan.UseNitrousOxideEngine());
         }
     }
 }

@@ -9,7 +9,7 @@ namespace Exercise2.Tests
         private OddOrEven _target;
 
         [Fact]
-        public void NumberIsOdd_GivenNumberIsOdd_ShouldReturnOdd()
+        public void CheckOddOrEven_GivenNumberIsOdd_ShouldReturnOdd()
         {
             //Arrange
             _target = new OddOrEven(5);
@@ -22,7 +22,7 @@ namespace Exercise2.Tests
         }
 
         [Fact]
-        public void NumberIsEven_GivenNumberIsEven_ShouldReturnEven()
+        public void CheckOddOrEven_GivenNumberIsEven_ShouldReturnEven()
         {
             //Arrange
             _target = new OddOrEven(4);
@@ -35,7 +35,7 @@ namespace Exercise2.Tests
         }
 
         [Fact]
-        public void PrintBye_ProgramHasToPrintBye_ShouldReturnBye()
+        public void CheckOddOrEven_ProgramHasToPrintBye_ShouldReturnBye()
         {
             //Arrange
             _target = new OddOrEven(4);
