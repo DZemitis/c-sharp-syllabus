@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 
 namespace Exercise_6
 {
@@ -7,29 +6,22 @@ namespace Exercise_6
     {
         static void Main(string[] args)
         {
-            int min = 1;
-            int max = 100;
-            Random randomNum = new Random();
-            int[] array1 = Enumerable
-                .Repeat(0, 10)
-                .Select(i => randomNum.Next(min, max))
-                .ToArray();
+            var arrayMethod = new MakeArray();
+            var array1 = arrayMethod.RandomArray();
+            var array2 = arrayMethod.ClonedArray(array1);
+            Console.WriteLine(arrayMethod.PrintArray("Array1"));
+            Console.WriteLine(PrintArray(array2, "Array2"));
+        }
 
-            int[] array2 = new int[array1.Length];
-            array1.CopyTo(array2, 0);
-            array1[9] = -7;
-
-            Console.Write("Array 1: ");
-            for (int i = 0; i < array1.Length; i++)
+        private static string PrintArray(int[] array, string name)
+        {
+            var stringBuilder = $"{name} :";
+            foreach (var n in array)
             {
-                Console.Write(array1[i].ToString() + " ");
+                stringBuilder += $" {n}";
             }
 
-            Console.Write("\nArray 2: ");
-            for (int i = 0; i < array2.Length; i++)
-            {
-                Console.Write(array2[i].ToString() + " ");
-            }
+            return stringBuilder;
         }
     }
 }

@@ -1,0 +1,8 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=4d922ded_002D88ee_002D4631_002D83af_002Da44c2c220075/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from ProductTests.cs" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Or&gt;&#xD;
+    &lt;ProjectFile&gt;5DEAE4E3-0836-48E0-AE4D-1E89ABAE5B8C/f:ProductTests.cs&lt;/ProjectFile&gt;&#xD;
+    &lt;Project Location="C:\Users\davis\Desktop\cshr\CSHARP\c-sharp-syllabus\csharp-basics\exercises\ClassesAndObjects\Exercise_5.Tests" Presentation="&amp;lt;Exercise_5.Tests&amp;gt;" /&gt;&#xD;
+    &lt;ProjectFile&gt;7DD353E0-B7CF-49A5-8178-5C597B822F8C/f:AccountTests.cs&lt;/ProjectFile&gt;&#xD;
+  &lt;/Or&gt;&#xD;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

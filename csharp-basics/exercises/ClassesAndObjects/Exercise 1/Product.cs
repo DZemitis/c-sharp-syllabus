@@ -1,21 +1,21 @@
 ﻿namespace Exercise_1
 {
-    class Product
+    public class Product
     {
         public Product(string name, double price, int amount)
         {
             _name = name;
-            PriceAtStart = price;
-            AmountAtStart = amount;
+            Price = price;
+            Amount = amount;
         }
 
         private string _name;
-        public double PriceAtStart { get; set; }
-        public int AmountAtStart { get; set; }
+        public double Price { get; set; }
+        public int Amount { get; set; }
 
         public string PrintProduct()
         {
-            return $"{_name} price {PriceAtStart:0.00} EUR, amount {AmountAtStart}";
+            return $"{_name} price {Price:0.00} EUR, amount {Amount}";
         }
     }
 }

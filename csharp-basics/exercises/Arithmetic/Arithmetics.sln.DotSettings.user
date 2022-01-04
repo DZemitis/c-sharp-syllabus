@@ -1,0 +1,12 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=6db6bbe3_002D46f3_002D4d29_002Dbdce_002Dd09cc8c8a137/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from &amp;lt;Exercise1Tests&amp;gt;" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Or&gt;&#xD;
+    &lt;Project Location="C:\Users\davis\Desktop\cshr\CSHARP\c-sharp-syllabus\csharp-basics\exercises\Arithmetic\Exercise1Tests" Presentation="&amp;lt;Exercise1Tests&amp;gt;" /&gt;&#xD;
+    &lt;Project Location="C:\Users\davis\Desktop\cshr\CSHARP\c-sharp-syllabus\csharp-basics\exercises\Arithmetic\Exercise2.Tests" Presentation="&amp;lt;Exercise2.Tests&amp;gt;" /&gt;&#xD;
+    &lt;Project Location="C:\Users\davis\Desktop\cshr\CSHARP\c-sharp-syllabus\csharp-basics\exercises\Arithmetic\Exercise_6.Tests" Presentation="&amp;lt;Exercise_6.Tests&amp;gt;" /&gt;&#xD;
+    &lt;Project Location="C:\Users\davis\Desktop\cshr\CSHARP\c-sharp-syllabus\csharp-basics\exercises\Arithmetic\GravityCalculator.Tests" Presentation="&amp;lt;GravityCalculator.Tests&amp;gt;" /&gt;&#xD;
+    &lt;ProjectFile&gt;365859FB-323B-4801-AF68-304A60BA6E45/f:SalaryCalculatorTests.cs&lt;/ProjectFile&gt;&#xD;
+    &lt;Project Location="C:\Users\davis\Desktop\cshr\CSHARP\c-sharp-syllabus\csharp-basics\exercises\Arithmetic\CalculateArea.Tests" Presentation="&amp;lt;CalculateArea.Tests&amp;gt;" /&gt;&#xD;
+  &lt;/Or&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	</wpf:ResourceDictionary>

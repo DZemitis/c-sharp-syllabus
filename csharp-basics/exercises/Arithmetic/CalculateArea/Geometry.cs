@@ -11,7 +11,7 @@ namespace CalculateArea
         public static double AreaOfCircle(decimal radius)
         {
             decimal areOf = (decimal)Math.PI * radius * radius;
-            return (double)areOf;
+            return Math.Round((double)areOf, 2);
         }
 
         public static double AreaOfRectangle(decimal length, decimal width)
